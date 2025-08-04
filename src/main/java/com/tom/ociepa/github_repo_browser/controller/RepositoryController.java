@@ -22,7 +22,7 @@ public class RepositoryController {
 
     @GetMapping("/{username}/repos")
     public List<RepositoryResponse> getUserRepositories(@PathVariable String username) {
-        return githubService.getRepositoriesWithBranches(username);
+        return githubService.getUserRepositoriesFromGithub(username);
     }
 
     @ExceptionHandler(UserNotFoundException.class)
